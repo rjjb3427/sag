@@ -1,0 +1,127 @@
+//iPhone
+
+@media only screen and (max-width: 767px)
+  .row .row .row
+    margin: 0 -10px
+
+  #nav
+    background: #000
+    text-align: center
+    .mobile
+      display: block
+    .brand
+      float: none
+      height: $topBarHeightMobile
+      text-align: center
+      .logo
+        float: none
+        width: 40px
+        vertical-align: top
+        margin-top: 6px
+      .name
+        display: none
+    ul.links > li a
+      text-align: left
+      height: 62px
+      line-height: 62px
+      border-top: none
+      border-bottom: 2px solid #fff
+      font-weight: lighter
+      font-size: 24px
+
+  #guides
+    .intro
+      max-width: 100%
+      position: relative
+      margin-top: 60px
+      padding: 20px
+      .lead
+        text-align: left
+        margin-bottom: 0
+
+    .logo
+      display: none
+    h2
+      display: none
+
+  .sidebar
+    margin-bottom: 40px
+    border-left: none
+  
+  .iconTile, .iconTile.last
+    margin-bottom: 20px
+
+  #slideshow
+    h3
+      font-size: 21px
+
+  p
+    font-size: 16px
+    &.lead
+      font-size: 19px
+
+  hr.divider
+    margin-bottom: 40px
+
+  h2.title
+    margin-right: 0
+    margin-left: 0
+    margin-bottom: 30px
+    font-size: 24px
+    &:before, &:after
+      margin: 0 10px
+    &.brand1
+      &:before, &:after
+        @include icon-sprite(diamond-small-blue)
+    &.brand2
+      &:before, &:after
+        @include icon-sprite(diamond-small-yellow)
+    &.brand3
+      &:before, &:after
+        @include icon-sprite(diamond-small-red)
+  
+  #main 
+    padding: 75px 25px
+    > header
+      display: none
+    > .columns
+      padding: 0
+
+  .post__title
+    font-size: 20px
+
+  .post__body
+    h1
+      font-size: $blog-mobile-heading-font-size
+    h2
+      font-size: $blog-mobile-heading-font-size * .875
+    h3
+      font-size: $blog-mobile-heading-font-size * .75
+    h4
+      font-size: $blog-mobile-heading-font-size * .625
+    h5
+      font-size: $blog-mobile-heading-font-size * .5
+    ul, ol
+      margin-left: 1.5em
+
+  .clientsList li
+    display: block
+    width: 100%
+    text-align: center
+    height: 100%
+    margin-bottom: 25px
+
+  .madeincincy
+    margin-top: 10px
+
+@media only screen and (max-width : 1024px)
+  .post__avatar
+    top: auto
+    bottom: -50px
+    margin-left: 65px
+    height: $avatar-size / 2
+    width: $avatar-size / 2
+
+  .post__author
+    margin-top: 18px
+    margin-left: 45px 

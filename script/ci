@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+#
+# Set up the test database
+#
+bundle exec rake db:test:prepare
+
+#
+# Rspec
+#
+bundle exec rspec --format documentation spec
+
+#
+# Konacha
+#
+bundle exec rake konacha:run
+

@@ -1,0 +1,294 @@
+#guides
+  @include clearfix()
+  overflow: hidden
+  width: 100%
+  min-height: 100%
+  background: #222
+  @include background-image(radial-gradient(center center, #333 0%, #1a1a1a 100%))
+  .intro
+    position: absolute
+    top: 50%
+    margin-top: -180px
+    left: 0
+    max-width: 400px
+    padding: 20px 40px
+    background: #000
+    color: #fff
+    text-align: justify
+    background: rgba(0, 0, 0, 0.75)
+    margin-bottom: 20px
+    .button
+      margin: 8px 0
+      float: right
+  .logo
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -110px 0 0 -134px
+  h2
+    position: absolute
+    right: 80px
+    bottom: 125px
+    text-align: right
+    color: #fff
+  svg
+    position: fixed !important
+    top: 0
+
+#main
+  background: #fff
+  @include box-shadow(0 -10px 10px #ddd)
+  padding: 100px 50px 100px + $footerHeight 50px
+  min-height: 100%
+  margin-bottom: - $footerHeight
+  > header
+    margin: 0px -75px $sectionMargin -75px
+    height: 370px
+    overflow: hidden
+    background-repeat: no-repeat
+    background-image: image-url("header0.jpg")
+    border-right: 6px solid #2b2b2b
+    &.brand1
+      background-image: image-url("header1.jpg")
+      border-color: $brand1
+      .intro
+        padding-top: 60px
+    &.brand2
+      background-image: image-url("header2.jpg")
+      border-color: $brand2
+      .intro
+        padding-top: 50px
+    &.brand3
+      background-image: image-url("header3.jpg")
+      border-color: $brand3
+    .headline
+      a
+        color: #fff
+        &:hover
+          color: darken(#fff, 10)
+      .map
+        h3
+          width: 226px
+          height: 221px
+          margin: 65px 0 20px 44px
+          padding: 65px 42px
+          line-height: 1.1em
+          text-align: center
+          background: image-url("ohio.png") no-repeat
+          color: #000
+          &:hover
+            color: $brand3
+        h4
+          &:hover
+            color: #000
+      h1
+        font-size: 50px
+        margin: 122px 0 0 25px
+      h4
+        text-align: center
+      &.brandBase h1, h4
+        color: #fff
+    .intro
+      padding: 20px 45px 20px 55px
+    .socialLinks
+      margin-top: 6px
+    .item
+      margin: 20px 0
+      h3
+        margin: 0
+      p
+        font-size: 1.25em
+        margin: 0
+      address a
+        color: $brand3
+        font-style: normal
+        font-size: 1.5em
+        font-weight: bold
+        &:hover
+          color: darken($brand3, 30%)
+
+  section.row
+    margin-bottom: $sectionMargin
+    p.emphasize
+      margin-bottom: 40px
+
+h2.title
+  text-align: center
+  border-top: 2px solid $headerFontColor
+  border-bottom: 2px solid $headerFontColor
+  margin: 0 100px $sectionMargin 100px
+  padding: 20px 0 15px 0
+  &:before, &:after
+    @include icon-sprite(diamond-grey)
+    content: ""
+    display: inline-block
+    margin: 0 15px
+  &.brand1:before, &.brand1:after
+    @include icon-sprite(diamond-blue)
+  &.brand2:before, &.brand2:after
+    @include icon-sprite(diamond-yellow)
+  &.brand3:before, &.brand3:after
+    @include icon-sprite(diamond-red)
+
+.row.expertise
+  p
+    margin-bottom: 40px
+
+.iconTile
+  text-align: center
+  margin-bottom: 40px
+  &.last
+    margin-bottom: 0
+  i
+    clear: both
+    margin-bottom: 15px
+  strong
+    font-size: 20px
+    display: inline-block
+    width: 100%
+
+hr.divider
+  border: 1px solid #c1c1c1
+  text-align: center
+  &.columns
+    margin-top: 10px
+    margin-bottom: $sectionMargin
+  &:before
+    @include icon-sprite(diamond-grey)
+    content: ""
+    display: inline-block
+    margin: -12px 15px 0 15px
+
+.flex-video
+  margin: 20px 0
+
+.contact .button
+  margin-top: 24px
+  float: right
+
+.buttonLinks
+  width: 100%
+  padding: 0 20px
+  .button
+    width: 100%
+    display: block
+    margin-bottom: 20px
+
+
+ul.photos li
+  height: 170px
+  width: 126px
+  list-style: none
+  float: left
+  margin: 0 20px 20px 0
+  position: relative
+  h3
+    line-height: 1.1em
+  .photo
+    overflow: hidden
+    position: relative
+    margin-bottom: 8px
+    img
+      vertical-align: bottom
+    .overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 100%
+      background: rgba(87, 192, 232, 0.7)
+      @include transition-property(top)
+      @include transition-duration(0.5s)
+    .links
+      position: absolute
+      top: 55px
+      width: 100%
+      text-align: center
+      a
+        margin: 0 5px
+        &:hover
+          @include opacity(0.7)
+
+  &:hover .overlay
+    top: 0
+
+  h3
+    text-align: center
+    font-size: 18px
+    margin: 0
+
+.skillList
+  li
+    list-style: none
+    font-size: 19px
+    padding: 2px 10px
+    @include border-radius(5px)
+    float: left
+    clear: both
+    &:hover
+      background: $brand1
+      color: #fff
+
+.socialLinks
+  margin: 0 0 0 -20px
+  li
+    list-style: none
+    display: inline-block
+    a
+      background: #000
+      display: inline-block
+      text-align: center
+      padding: 5px 10px
+      margin: 0 0 0 20px
+      border: 3px solid #fff
+      color: #fff
+      @include brandColors(border-color)
+      @include border-radius(5px)
+      &:hover
+        @include brandColors(color, 20%)
+
+
+.clientsList
+  text-align: center
+  li
+    display: inline-block
+    margin: 0 20px 0 0
+    width: 30%
+    height: 100px
+    list-style: none
+    a
+      max-width: 100%
+
+#slideshow
+  margin-bottom: $sectionMargin
+  h3
+    margin: 0
+    background: #000
+    color: #fff
+    text-align: center
+    line-height: 2em
+  .timer
+    display: none
+
+.contact form
+  .flash
+    position: absolute
+    bottom: 0
+    @extend .button
+    &.success
+      background: $brand1
+
+.sidebar
+  h5
+    @include brandColors(background)
+    color: #fff
+    margin: 0
+    padding: 10px 0
+    text-align: center
+  .content
+    padding: 20px
+    background: #f4f4f4
+
+a.anchor
+  display: block
+  position: relative
+  top: -$topBarHeight - 10
